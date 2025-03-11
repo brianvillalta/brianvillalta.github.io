@@ -105,3 +105,22 @@ form button {
 form button:hover {
   background-color: #0e3b5c;
 }
+
+/* Mobile Responsive Fix */
+@media (max-width: 600px) {
+  form {
+    width: 90%; /* Make form width smaller on mobile */
+    margin: 20px auto; /* Center it properly */
+    padding: 15px;
+  }
+
+  form input,
+  form textarea {
+    width: 100%; /* Ensure input fields take full width */
+    font-size: 14px; /* Adjust text size for readability */
+  }
+
+  form button {
+    width: 100%; /* Make the button span full width */
+  }
+}
