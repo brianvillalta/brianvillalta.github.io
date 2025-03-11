@@ -106,32 +106,41 @@ form button:hover {
   background-color: #0e3b5c;
 }
 
-/* Mobile Responsive Fix */
+/* Mobile Optimization */
 @media (max-width: 600px) {
   form {
-    width: 95%; /* Ensures the form doesn't exceed the screen width */
-    max-width: 500px; /* Prevents it from being too wide */
-    margin: 20px auto; /* Centers the form */
+    width: 95%;
+    max-width: 500px;
+    margin: 10px auto; /* Reduce margin for better fit */
     padding: 15px;
-    box-sizing: border-box; /* Ensures padding doesn't add extra width */
+    box-sizing: border-box;
   }
 
   form input,
   form textarea {
-    width: 100%; /* Ensures fields are not overflowing */
+    width: 100%;
     font-size: 14px;
     padding: 10px;
-    margin-bottom: 10px; /* Adds spacing between fields */
-    box-sizing: border-box; /* Fixes width issues */
+    margin-bottom: 8px; /* Reduce spacing between fields */
+    box-sizing: border-box;
   }
 
-  form label {
-    display: block; /* Makes labels appear above inputs */
-    font-size: 14px;
+  form textarea {
+    height: 100px; /* Reduce height of message box on mobile */
+    resize: vertical; /* Allow manual resizing if needed */
   }
 
   form button {
-    width: 100%; /* Makes button full width */
+    width: 100%;
     font-size: 16px;
+    padding: 12px;
+    margin-top: 10px; /* Adjust margin to keep it close */
+    position: relative; /* Ensure it stays visible */
+  }
+
+  /* Prevent weird scrolling behavior */
+  html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 }
