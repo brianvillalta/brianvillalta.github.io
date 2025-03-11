@@ -1,11 +1,9 @@
-@import url('https://cdn.jsdelivr.net/gh/dreampiggy/webfont-ComputerModern/cmun-serif.css');
+@import url('https://cdn.jsdelivr.net/npm/latin-modern-web@1.2.0/latin-modern.css');
 
 body {
-  font-family: 'CMU Serif', serif;
+  font-family: 'Latin Modern Roman', serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  line-height: 1.6;
 }
 
 header {
