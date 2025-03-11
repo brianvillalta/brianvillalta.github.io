@@ -109,18 +109,29 @@ form button:hover {
 /* Mobile Responsive Fix */
 @media (max-width: 600px) {
   form {
-    width: 90%; /* Make form width smaller on mobile */
-    margin: 20px auto; /* Center it properly */
+    width: 95%; /* Ensures the form doesn't exceed the screen width */
+    max-width: 500px; /* Prevents it from being too wide */
+    margin: 20px auto; /* Centers the form */
     padding: 15px;
+    box-sizing: border-box; /* Ensures padding doesn't add extra width */
   }
 
   form input,
   form textarea {
-    width: 100%; /* Ensure input fields take full width */
-    font-size: 14px; /* Adjust text size for readability */
+    width: 100%; /* Ensures fields are not overflowing */
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 10px; /* Adds spacing between fields */
+    box-sizing: border-box; /* Fixes width issues */
+  }
+
+  form label {
+    display: block; /* Makes labels appear above inputs */
+    font-size: 14px;
   }
 
   form button {
-    width: 100%; /* Make the button span full width */
+    width: 100%; /* Makes button full width */
+    font-size: 16px;
   }
 }
