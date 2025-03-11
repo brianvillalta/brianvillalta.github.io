@@ -111,9 +111,11 @@ form button:hover {
   form {
     width: 95%;
     max-width: 500px;
-    margin: 10px auto; /* Reduce margin for better fit */
+    margin: 10px auto;
     padding: 15px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
   }
 
   form input,
@@ -121,26 +123,36 @@ form button:hover {
     width: 100%;
     font-size: 14px;
     padding: 10px;
-    margin-bottom: 8px; /* Reduce spacing between fields */
+    margin-bottom: 8px;
     box-sizing: border-box;
   }
 
   form textarea {
-    height: 100px; /* Reduce height of message box on mobile */
-    resize: vertical; /* Allow manual resizing if needed */
+    height: 80px; /* Reduce textarea height to avoid excessive scrolling */
+    resize: vertical; /* Allow user to manually resize if needed */
   }
 
   form button {
     width: 100%;
     font-size: 16px;
     padding: 12px;
-    margin-top: 10px; /* Adjust margin to keep it close */
-    position: relative; /* Ensure it stays visible */
+    margin-top: 10px;
+    position: fixed; /* Keeps button visible at the bottom */
+    bottom: 15px; /* Positions it slightly above bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #114678;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
   }
 
-  /* Prevent weird scrolling behavior */
+  /* Prevent the page from snapping back up */
   html, body {
-    overflow-x: hidden;
+    height: 100%;
+    overflow-y: auto; /* Ensures scrolling works properly */
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Fixes iOS scrolling issues */
   }
 }
