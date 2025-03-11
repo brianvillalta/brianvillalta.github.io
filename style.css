@@ -60,8 +60,8 @@ footer {
 
 /* General Form Styling */
 form {
-  max-width: 600px;
-  margin: 20px auto;
+  max-width: 500px; /* Reduce form size for better fit */
+  margin: 10px auto; /* Center the form */
   padding: 15px;
   background: #fff;
   border: 1px solid #ccc;
@@ -73,49 +73,49 @@ form {
 
 /* Label Styling */
 form label {
-  display: block;
-  margin-top: 10px;
+  font-size: 14px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 /* Input and Textarea Styling */
 form input,
 form textarea {
   width: 100%;
-  padding: 10px;
+  font-size: 14px;
+  padding: 8px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
-  box-sizing: border-box; /* Ensures padding doesn’t affect width */
+  box-sizing: border-box;
 }
 
-/* Fix alignment of Email & Subject fields */
-form input[type="email"],
-form input[type="text"] {
-  display: block;
-  width: 100%; /* Ensures both fields take full width */
+/* Adjust textarea size */
+form textarea {
+  height: 80px; /* Smaller height to fit on screen */
+  resize: vertical;
 }
 
-/* Fix the message word count display */
+/* Word count */
 #wordCount {
   text-align: right;
-  font-size: 14px;
+  font-size: 12px;
   color: #555;
   margin-top: 5px;
 }
 
-/* Submit Button */
+/* Bring back the Send Message Button */
 form button {
-  margin-top: 15px;
-  padding: 10px 15px;
-  font-size: 16px;
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 10px;
   background-color: #114678;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  width: 100%; /* Makes button full width */
+  text-align: center;
 }
 
 form button:hover {
@@ -125,50 +125,24 @@ form button:hover {
 /* Mobile Optimization */
 @media (max-width: 600px) {
   form {
-    width: 95%;
-    max-width: 500px;
-    margin: 10px auto;
-    padding: 15px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    width: 90%; /* Ensure it fits smaller screens */
+    padding: 10px;
   }
 
   form input,
   form textarea {
-    width: 100%;
-    font-size: 14px;
-    padding: 10px;
-    margin-bottom: 8px;
-    box-sizing: border-box;
+    font-size: 12px; /* Smaller text for mobile */
+    padding: 6px;
   }
 
   form textarea {
-    height: 80px; /* Reduce textarea height to avoid excessive scrolling */
-    resize: vertical; /* Allow user to manually resize if needed */
+    height: 70px; /* Reduce height on mobile */
   }
 
   form button {
+    font-size: 14px;
+    padding: 10px;
     width: 100%;
-    font-size: 16px;
-    padding: 12px;
-    margin-top: 10px;
-    position: fixed; /* Keeps button visible at the bottom */
-    bottom: 15px; /* Positions it slightly above bottom */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #114678;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-
-  /* Prevent the page from snapping back up */
-  html, body {
-    height: 100%;
-    overflow-y: auto; /* Ensures scrolling works properly */
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Fixes iOS scrolling issues */
+    position: relative;
   }
 }
